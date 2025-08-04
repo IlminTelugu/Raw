@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Image & Quote</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #1b1f3b, #283e6a, #384e8d);
+      background-size: 300% 300%;
+      animation: shineBackground 18s ease infinite;
+      color: #ffffff;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    @keyframes shineBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .image-wrapper {
+      display: inline-block;
+      max-width: 90%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.04);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .quote {
+      margin-top: 25px;
+      font-size: 1.4em;
+      font-weight: 600;
+      color: #e0e6f0;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 24px;
+      font-size: 1em;
+      background: linear-gradient(to right, #0057b8, #0096ff);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #003e91, #0074d9);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-bottom {
+      margin-top: 30px;
+    }
+
+    .whatsapp-bottom a {
+      display: inline-block;
+      background: linear-gradient(to right, #0057b8, #0096ff);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-bottom a:hover {
+      background: linear-gradient(to right, #003e91, #0074d9);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <div class="image-wrapper">
+      <img id="randomImage" src="" alt="Random Image">
+    </div>
+
+    <div class="quote" id="quoteText">మీరు ఇమేజ్ ని లాంగ్ ప్రెస్ చేయండి డౌన్లోడ్ క్లిక్ చేయండి</div>
+    <button onclick="showRandom()">Show Another</button>
+  </div>
+
+  <div class="whatsapp-bottom">
+    <a href="https://whatsapp.com/channel/0029VbAw5ZzLCoWw5rh8Jm0J" target="_blank">
+      ✅ Join Our WhatsApp Channel
+    </a>
+  </div>
+
+  <script>
+    const images = [
+      "https://i.ibb.co/PZNxC2pq/IMG-20250804-WA0024.jpg",
+      "https://i.ibb.co/Qvkk7ZC8/IMG-20250804-WA0023.jpg",
+      "https://i.ibb.co/WC1THwG/IMG-20250804-WA0021.jpg",
+      "https://i.ibb.co/2w14H7R/IMG-20250804-WA0020.jpg",
+      "https://i.ibb.co/hR9t6TZ3/IMG-20250804-WA0019.jpg"
+    ];
+
+    function showRandom() {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      const imageElement = document.getElementById("randomImage");
+      imageElement.src = images[randomIndex];
+    }
+
+    window.onload = showRandom;
+  </script>
+
+</body>
+</html>
