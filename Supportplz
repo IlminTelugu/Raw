@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support Our Team</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .corner-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: none;
+      border: none;
+      font-size: 2em;
+      color: white;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .container {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      padding-top: 60px; /* space for arrow button */
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px white;
+    }
+
+    img {
+      max-width: 90%;
+      height: auto;
+      border: 5px solid blue;
+      box-shadow: 0 0 20px white;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .telugu-text {
+      font-size: 1.2em;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ⬅️ Fixed Arrow Button in Corner -->
+  <button class="corner-button" onclick="location.href='index.html'">⬅️</button>
+
+  <div class="container">
+    <h1>Support our Team</h1>
+    <a href="https://ibb.co/0pzMf8ZK">
+      <img src="https://i.ibb.co/FkdwBNJX/IMG-20250805-082402.png" alt="IMG-20250805-082402">
+    </a>
+    <div class="telugu-text">
+      మీరు మద్దతు ఇస్తే, అది మాకు ఒక మంచి సహాయం అవుతుంది.<br>
+      అల్లాహ్ మీ మద్దతును స్వీకరించునుగాక.
+    </div>
+  </div>
+
+</body>
+</html>
